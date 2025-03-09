@@ -1,9 +1,8 @@
 import { getAnswer, getName } from "./cli.js";
 
 export function startGame(desc, generateRound) {
-  console.log(desc);
-
   const userName = helloUser();
+  console.log(desc);
   const roundsCount = 3;
 
   for (let i = 0; i < roundsCount; i++) {
