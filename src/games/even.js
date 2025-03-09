@@ -1,7 +1,6 @@
-import { getRandomNumber } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
-export const desc =
-  'Answer "yes" if the number is even, otherwise answer "no".';
+export const desc = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 export function generateRound() {
   const number = getRandomNumber(1, 100);

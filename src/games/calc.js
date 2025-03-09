@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 function calculate(a, b, operator) {
   switch (operator) {
