@@ -1,11 +1,18 @@
 import { getAnswer, getName } from './cli.js';
 
+export function helloUser() {
+  console.log('Welcome to the Brain Games!');
+  const userName = getName();
+  console.log(`Hello, ${userName}`);
+  return userName;
+}
+
 export function startGame(desc, generateRound) {
   const userName = helloUser();
   console.log(desc);
   const roundsCount = 3;
 
-  for (let i = 0; i < roundsCount; i++) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const [question, correctAnswer] = generateRound();
     const userAnswer = getAnswer(`Question: ${question}`).toLowerCase();
 
@@ -20,11 +27,4 @@ export function startGame(desc, generateRound) {
   }
 
   console.log(`Congratulations, ${userName}!`);
-}
-
-export function helloUser() {
-  console.log('Welcome to the Brain Games!');
-  const userName = getName();
-  console.log(`Hello, ${userName}`);
-  return userName;
 }
