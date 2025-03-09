@@ -1,16 +1,9 @@
-import { getAnswer } from "./cli.js";
+import { getAnswer, getName } from "./cli.js";
 
-const desc = 'Answer "yes" if the number is even, otherwise answer "no".';
-
-function generateRound() {
-  const number = Math.floor(Math.random() * 100) + 1;
-  const correctAnswer = number % 2 === 0 ? "yes" : "no";
-  return [number, correctAnswer];
-}
-
-export function startGame(userName) {
+export function startGame(desc, generateRound) {
   console.log(desc);
 
+  const userName = helloUser();
   const roundsCount = 3;
 
   for (let i = 0; i < roundsCount; i++) {
@@ -28,4 +21,11 @@ export function startGame(userName) {
   }
 
   console.log(`Congratulations, ${userName}!`);
+}
+
+export function helloUser() {
+  console.log("Welcome to the Brain Games!");
+  const userName = getName();
+  console.log(`Hello, ${userName}`);
+  return userName;
 }
