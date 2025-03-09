@@ -1,9 +1,41 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
+import globals from 'globals';
+import js from '@eslint/js';
+import importPlugin from 'eslint-plugin-import';
 
-
-/** @type {import('eslint').Linter.Config[]} */
+// /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
-  {languageOptions: { globals: globals.browser }},
-  pluginJs.configs.recommended,
+  js.configs.recommended,
+  {
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
+    },
+    plugins: {
+      import: importPlugin,
+    },
+    rules: {
+      quotes: ['error', 'single'],
+      semi: ['error', 'always'],
+
+      'object-curly-spacing': ['error', 'always'],
+      'operator-linebreak': ['error', 'after'],
+      'no-multiple-empty-lines': ['error', { max: 1 }],
+      'eol-last': ['error', 'always'],
+
+      'import/prefer-default-export': 'off',
+      'import/no-unresolved': 'error',
+
+      'no-param-reassign': ['error', { props: true }],
+
+      'no-plusplus': 'off',
+
+      'function-paren-newline': ['error', 'consistent'],
+    },
+    ignores: ['**/node_modules/**', '**/dist/**'],
+  },
 ];

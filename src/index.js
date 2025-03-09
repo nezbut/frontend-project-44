@@ -1,4 +1,4 @@
-import { getAnswer, getName } from "./cli.js";
+import { getAnswer, getName } from './cli.js';
 
 export function startGame(desc, generateRound) {
   const userName = helloUser();
@@ -16,14 +16,14 @@ export function startGame(desc, generateRound) {
       console.log(`Let's try again, ${userName}!`);
       return;
     }
-    console.log("Correct!");
+    console.log('Correct!');
   }
 
   console.log(`Congratulations, ${userName}!`);
 }
 
 export function helloUser() {
-  console.log("Welcome to the Brain Games!");
+  console.log('Welcome to the Brain Games!');
   const userName = getName();
   console.log(`Hello, ${userName}`);
   return userName;

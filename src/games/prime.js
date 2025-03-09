@@ -1,4 +1,4 @@
-import { getRandomNumber } from "../utils.js";
+import { getRandomNumber } from '../utils.js';
 
 function isPrime(number) {
   if (number < 2) return false;
@@ -13,6 +13,6 @@ export const desc =
 
 export function generateRound() {
   const number = getRandomNumber(1, 100);
-  const correctAnswer = isPrime(number) ? "yes" : "no";
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [String(number), correctAnswer];
 }

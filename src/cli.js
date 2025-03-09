@@ -1,7 +1,7 @@
-import redlineSync from "readline-sync";
+import redlineSync from 'readline-sync';
 
 export function getName() {
-  return redlineSync.question("May I have your name? ");
+  return redlineSync.question('May I have your name? ');
 }
 
 export function getAnswer(question) {

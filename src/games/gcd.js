@@ -1,6 +1,8 @@
-import { getRandomNumber } from "../utils.js";
+import { getRandomNumber } from '../utils.js';
 
-function calculateGCD(a, b) {
+function calculateGCD(x, y) {
+  let a = x;
+  let b = y;
   while (b !== 0) {
     const temp = b;
     b = a % b;
@@ -9,7 +11,7 @@ function calculateGCD(a, b) {
   return a;
 }
 
-export const desc = "Find the greatest common divisor of given numbers.";
+export const desc = 'Find the greatest common divisor of given numbers.';
 
 export function generateRound() {
   const num1 = getRandomNumber(1, 100);
