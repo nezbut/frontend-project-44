@@ -1,6 +1,6 @@
-import globals from 'globals';
-import js from '@eslint/js';
-import importPlugin from 'eslint-plugin-import';
+import js from '@eslint/js'
+import importPlugin from 'eslint-plugin-import'
+import globals from 'globals'
 
 // /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
@@ -20,7 +20,7 @@ export default [
     },
     rules: {
       quotes: ['error', 'single'],
-      semi: ['error', 'always'],
+      semi: ['error', 'never'],
 
       'object-curly-spacing': ['error', 'always'],
       'operator-linebreak': ['error', 'after'],
@@ -38,4 +38,4 @@ export default [
     },
     ignores: ['**/node_modules/**', '**/dist/**'],
   },
-];
+]
