@@ -19,8 +19,8 @@ export default [
       import: importPlugin,
     },
     rules: {
-      quotes: ['error', 'single'],
-      semi: ['error', 'never'],
+      'quotes': ['error', 'single'],
+      'semi': ['error', 'never'],
 
       'object-curly-spacing': ['error', 'always'],
       'operator-linebreak': ['error', 'after'],
